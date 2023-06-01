@@ -1,4 +1,4 @@
-package com.Giftical.Gictical_server.domain;
+package com.Giftical.Gictical_server.Gifticon;
 
 import java.awt.*;
 import java.sql.Date;

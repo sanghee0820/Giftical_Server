@@ -1,7 +1,6 @@
-package com.Giftical.Gictical_server.repository;
+package com.Giftical.Gictical_server.Gifticon;
 
-import com.Giftical.Gictical_server.domain.Gifticon;
-import com.Giftical.Gictical_server.domain.Store;
+import com.Giftical.Gictical_server.Store.Store;
 
 import java.sql.Date;
 import java.time.LocalDate;

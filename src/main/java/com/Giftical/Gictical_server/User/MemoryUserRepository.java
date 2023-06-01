@@ -1,6 +1,4 @@
-package com.Giftical.Gictical_server.repository;
-
-import com.Giftical.Gictical_server.domain.User;
+package com.Giftical.Gictical_server.User;
 
 import java.util.HashMap;
 import java.util.List;

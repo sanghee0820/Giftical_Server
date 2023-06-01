@@ -1,12 +1,10 @@
-package com.Giftical.Gictical_server.repository;
-
-import com.Giftical.Gictical_server.domain.Store;
+package com.Giftical.Gictical_server.Store;
 
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class MemoryStoreRepository implements StoreRepository{
+public class ServerStoreRepository implements StoreRepository{
 
     private static Map<String, Store> storeMemory = new ConcurrentHashMap<>();
     @Override

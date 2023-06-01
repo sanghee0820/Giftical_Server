@@ -1,9 +1,6 @@
-package com.Giftical.Gictical_server.Service;
+package com.Giftical.Gictical_server.Gifticon;
 
-import com.Giftical.Gictical_server.domain.Gifticon;
-import com.Giftical.Gictical_server.domain.Store;
-import com.Giftical.Gictical_server.repository.GifticonRepository;
-import com.Giftical.Gictical_server.repository.MemoryGifticonRepository;
+import com.Giftical.Gictical_server.Store.Store;
 
 import java.util.List;
 

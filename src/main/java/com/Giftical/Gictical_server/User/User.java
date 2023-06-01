@@ -1,4 +1,4 @@
-package com.Giftical.Gictical_server.domain;
+package com.Giftical.Gictical_server.User;
 
 public class User {
 

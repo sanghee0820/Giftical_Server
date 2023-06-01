@@ -1,4 +1,4 @@
-package com.Giftical.Gictical_server.Error;
+package com.Giftical.Gictical_server.Gifticon;
 
 public enum GifticonUseError {
     BarcodeError,

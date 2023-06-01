@@ -1,4 +1,4 @@
-package com.Giftical.Gictical_server.domain;
+package com.Giftical.Gictical_server.Store;
 
 import java.awt.*;
 import java.util.List;
@@ -7,25 +7,25 @@ public class Store {
     private String businessStoreNo;
     private String storeName;
     private String storeAddr;
-    private short storeReigon;
+//    private short storeReigon;
     private String storeLattitude;
     private String storeLongtitude;
     private String storeExplanation;
     private String storeContact;
-    private List<Image> storePhoto;
+//    private List<Image> storePhoto;
 
     public Store(String businessStoreNO, String storeName, String storeAddr,
-                 short storeReigon, String lattitude, String storeLattitude, String storeLongtitude,
+                 short storeReigon, String lattitude, /*String storeLattitude, */String storeLongtitude,
                  String storeExplanation, String storeContact) {
         this.businessStoreNo = businessStoreNO;
         this.storeName = storeName;
         this.storeAddr = storeAddr;
-        this.storeReigon = storeReigon;
+//        this.storeReigon = storeReigon;
         this.storeLattitude = storeLattitude;
         this.storeLongtitude = storeLongtitude;
         this.storeExplanation = storeExplanation;
         this.storeContact = storeContact;
-        this.storePhoto = (List<Image>) storePhoto;
+//        this.storePhoto = (List<Image>) storePhoto;
     }
 
     public String getBusinessStoreNo() {
@@ -39,9 +39,9 @@ public class Store {
         return storeAddr;
     }
 
-    public short getStoreReigon() {
-        return storeReigon;
-    }
+//    public short getStoreReigon() {
+//        return storeReigon;
+//    }
 
     public String getStoreLattitude() {
         return storeLattitude;
@@ -59,9 +59,9 @@ public class Store {
         return storeContact;
     }
 
-    public List<Image> getStorePhoto() {
-        return storePhoto;
-    }
+//    public List<Image> getStorePhoto() {
+//        return storePhoto;
+//    }
 
     public void setStoreName(String storeName, boolean auth) {
         if( auth ) this.storeName = storeName;
@@ -71,7 +71,7 @@ public class Store {
                              String storeLattitude, String storeLongtitude, boolean auth) {
 
         this.storeAddr = storeAddr;
-        this.storeReigon = storeReigon;
+//        this.storeReigon = storeReigon;
         this.storeLattitude = storeLattitude;
         this.storeLongtitude = storeLongtitude;
     }
@@ -90,12 +90,12 @@ public class Store {
                 "businessStoreNo='" + businessStoreNo + '\'' +
                 ", storeName='" + storeName + '\'' +
                 ", storeAddr='" + storeAddr + '\'' +
-                ", storeReigon=" + storeReigon +
+//                ", storeReigon=" + storeReigon +
                 ", storeLattitude='" + storeLattitude + '\'' +
                 ", storeLongtitude='" + storeLongtitude + '\'' +
                 ", storeExplanation='" + storeExplanation + '\'' +
                 ", storeContact='" + storeContact + '\'' +
-                ", storePhoto=" + storePhoto +
+//                ", storePhoto=" + storePhoto +
                 '}';
     }
 }
