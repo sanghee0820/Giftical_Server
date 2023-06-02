@@ -1,13 +1,12 @@
 package com.Giftical.Gictical_server.Store;
 
 import com.Giftical.Gictical_server.Store.Store;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 
-public interface StoreRepository {
-
-    void save(Store store);
-
-    List<Store> getAllStore();
+@Repository
+public interface StoreRepository  extends JpaRepository<Store, String> {
 }

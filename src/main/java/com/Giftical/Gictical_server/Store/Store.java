@@ -1,9 +1,19 @@
 package com.Giftical.Gictical_server.Store;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import lombok.Data;
+import lombok.Getter;
+import org.springframework.data.annotation.Id;
+
 import java.awt.*;
 import java.util.List;
-
+@Data
+@Entity(name = "store")
 public class Store {
+    @Id
     private String businessStoreNo;
     private String storeName;
     private String storeAddr;
@@ -14,6 +24,8 @@ public class Store {
     private String storeContact;
 //    private List<Image> storePhoto;
 
+    public Store() {
+    }
     public Store(String businessStoreNO, String storeName, String storeAddr,
                  short storeReigon, String lattitude, /*String storeLattitude, */String storeLongtitude,
                  String storeExplanation, String storeContact) {
@@ -28,44 +40,7 @@ public class Store {
 //        this.storePhoto = (List<Image>) storePhoto;
     }
 
-    public String getBusinessStoreNo() {
-        return businessStoreNo;
-    }
-    public String getStoreName() {
-        return storeName;
-    }
 
-    public String getStoreAddr() {
-        return storeAddr;
-    }
-
-//    public short getStoreReigon() {
-//        return storeReigon;
-//    }
-
-    public String getStoreLattitude() {
-        return storeLattitude;
-    }
-
-    public String getStoreLongtitude() {
-        return storeLongtitude;
-    }
-
-    public String getStoreExplanation() {
-        return storeExplanation;
-    }
-
-    public String getStoreContact() {
-        return storeContact;
-    }
-
-//    public List<Image> getStorePhoto() {
-//        return storePhoto;
-//    }
-
-    public void setStoreName(String storeName, boolean auth) {
-        if( auth ) this.storeName = storeName;
-    }
 
     public void setStoreAddr(String storeAddr, short storeReigon,
                              String storeLattitude, String storeLongtitude, boolean auth) {
@@ -74,14 +49,6 @@ public class Store {
 //        this.storeReigon = storeReigon;
         this.storeLattitude = storeLattitude;
         this.storeLongtitude = storeLongtitude;
-    }
-
-    public void setStoreExplanation(String storeExplanation, boolean auth) {
-        this.storeExplanation = storeExplanation;
-    }
-
-    public void setStoreContact(String storeContact, boolean auth) {
-        this.storeContact = storeContact;
     }
 
     @Override
