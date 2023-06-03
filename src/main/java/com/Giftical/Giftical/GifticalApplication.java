@@ -1,13 +1,13 @@
-package com.Giftical.Gictical_server;
+package com.Giftical.Giftical;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GicticalServerApplication {
+public class GifticalApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GicticalServerApplication.class, args);
+		SpringApplication.run(GifticalApplication.class, args);
 	}
 
 }

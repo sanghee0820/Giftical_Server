@@ -1,10 +1,10 @@
-package com.Giftical.Gictical_server;
+package com.Giftical.Giftical;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GicticalServerApplicationTests {
+class GifticalApplicationTests {
 
 	@Test
 	void contextLoads() {
