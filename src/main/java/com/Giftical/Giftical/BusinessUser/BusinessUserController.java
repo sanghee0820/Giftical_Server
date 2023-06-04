@@ -5,10 +5,7 @@ import com.Giftical.Giftical.Store.Store;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -26,5 +23,11 @@ public class BusinessUserController {
         log.println(requestData.get("businessId"));
         log.println(requestData.get("businessPw"));
         return businessUserService.login(requestData.get("businessId"),requestData.get("businessPw"));
+    }
+
+    @PostMapping("/vendor/join")
+    public ResponseEntity<List<Store>> join(@RequestBody BusinessUser businessUser, @ResponseBody Store store){ // Make DTO
+        businessUserService.join(businessUser);
+        return businessUserService.login(businessUser.getBusinessUserId(), businessUser.getBusinessUserPw());
     }
 }
