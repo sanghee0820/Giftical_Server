@@ -4,16 +4,17 @@ package com.Giftical.Giftical.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.logging.Logger;
-
 @RestController
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
 
-    @RequestMapping(value = "/user/login")
-//    @GetMapping("/user/login")
-    public User login(User user){
+    @PostMapping(value = "/user/login")
+//    public User login(@RequestParam String userId, @RequestParam String userPw,
+//                      @RequestParam String userName, @RequestParam String userPhoneNum){
+//        return new User(userId, userPw, userName, userPhoneNum);
+//}
+    public User login(@RequestBody User user){
         return user;
     }
 

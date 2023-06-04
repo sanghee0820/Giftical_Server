@@ -13,9 +13,14 @@ import javax.persistence.Id;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 public class User {
     @Id
     private String userId;
     private String userPw;
+    private String userName;
+    private String userPhoneNum;
+
+    public void setterPhoneNum(String userPhoneNum){ this.userPhoneNum = userPhoneNum; }
+    public void setterPw(String userPw){ this.userPw = userPw; }
+
 }

@@ -13,10 +13,10 @@ public class UserService {
     private final UserRepository userRepository;
 
     @Transactional
-    UserLogin login(User login_user) {
+    ErrorUserLogin login(User login_user) {
         Optional<User> findUser = userRepository.findById(login_user.getUserId());
-        if(findUser.isEmpty()) return UserLogin.Error_No_match_Id;
-        if(findUser.get().getUserPw() == login_user.getUserPw()) return UserLogin.Error_Pw;
-        return UserLogin.Success;
+        if(findUser.isEmpty()) return ErrorUserLogin.Error_No_match_Id;
+        if(findUser.get().getUserPw() == login_user.getUserPw()) return ErrorUserLogin.Error_Pw;
+        return ErrorUserLogin.Success;
     }
 }
