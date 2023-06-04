@@ -9,15 +9,12 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class StoreServices {
+public class StoreService {
 
     private final StoreRepository storeRepository;
 
     Store save(Store store){
         return storeRepository.save(store);
-    }
-    List<Store> findByName(String storename){
-        return storeRepository.findByStoreName(storename);
     }
     Optional<Store> findById(String BusinessNum){
         return storeRepository.findById(BusinessNum);

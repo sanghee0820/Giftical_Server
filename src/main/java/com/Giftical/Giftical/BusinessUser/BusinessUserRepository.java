@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BusinessUserRepository extends JpaRepository<BusinessUser, Object> {
+    public BusinessUser findByBusinessUserId(String id);
 }

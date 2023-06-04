@@ -13,4 +13,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Giftical.main" options="--add-exports jdk.scripting.nashorn/jdk.nashorn.internal.runtime.regexp.joni=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>

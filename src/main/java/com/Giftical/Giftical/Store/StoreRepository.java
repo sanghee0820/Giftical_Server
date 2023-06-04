@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface StoreRepository extends JpaRepository<Store, Object> {
-    List<Store> findByStoreName(String storeName);
+    List<Store> findByBusinessUserId(Long id);
 }
