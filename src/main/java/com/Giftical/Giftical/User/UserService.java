@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 
 import java.util.Optional;
@@ -20,8 +19,6 @@ public class UserService {
     @Transactional
     ResponseEntity<User> login(String userId, String userPw) {
         Optional<User> findUser = Optional.ofNullable(userRepository.findByuserId(userId));
-        log.println(userId);
-        log.println(userPw);
         if(findUser.isEmpty()) return new ResponseEntity<>(null,
                 HttpStatus.valueOf(HttpStatus.NON_AUTHORITATIVE_INFORMATION.value()));
         if(findUser.get().getUserPw() == userPw) return new ResponseEntity<>(null,

@@ -18,8 +18,7 @@ public class UserController {
 
     @PostMapping(value = "/user/login")
     public ResponseEntity<User> login(@RequestBody HashMap<String, String> user){
-        log.println(user.get("userId"));
-        log.println(user.get("userPw"));
+
         return userService.login(user.get("userId"), user.get("userPw"));
     }
 
@@ -30,7 +29,6 @@ public class UserController {
     }
     @PostMapping("/user/info")
     public ResponseEntity<User> search(@RequestBody HashMap<String, Long> userPk){
-        log.println(userPk.get("userPk"));
         return new ResponseEntity<>(userService.search(userPk.get("userPk")), HttpStatus.OK);
     }
 

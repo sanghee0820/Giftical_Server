@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 
 @RestController
@@ -20,8 +19,7 @@ public class BusinessUserController {
 
     @PostMapping("/vendor/login")
     public ResponseEntity<List<Store>> login(@RequestBody Map<String, String> requestData){
-        log.println(requestData.get("businessId"));
-        log.println(requestData.get("businessPw"));
+
         return businessUserService.login(requestData.get("businessId"),requestData.get("businessPw"));
     }
 
