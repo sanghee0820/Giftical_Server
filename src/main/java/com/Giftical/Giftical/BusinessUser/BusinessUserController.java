@@ -30,4 +30,7 @@ public class BusinessUserController {
         businessUserService.join(businessUser);
         return businessUserService.login(businessUser.getBusinessUserId(), businessUser.getBusinessUserPw());
     }
+    @PostMapping("/test")
+    public void test(){}
+    
 }
