@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
-
 @RestController
 @RequiredArgsConstructor
 public class UserController {
