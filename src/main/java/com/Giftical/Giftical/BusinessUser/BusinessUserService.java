@@ -16,8 +16,13 @@ public class BusinessUserService {
     private final BusinessUserRepository businessUserRepository;
     private final StoreRepository storeRepository;
 
-    public void join(BusinessUser user) {
-        businessUserRepository.save(user);
+    public BusinessUser join(BusinessJoinDTO user) {
+        BusinessUser newUser = new BusinessUser(null, user.getBusinessUserId(),
+                user.getBusinessUserPw(), user.getBusinessBankAccount(), user.getBusinessBankCode(),
+                user.getBusinessUserPhoneNum());
+        newUser = businessUserRepository.save(newUser);
+        storeRepository.save(new Store(newUser.getId(), user.getBusinessStoreNo()));
+        return newUser;
     }
     public ResponseEntity<List<Store>> login(String id, String pw){
         Optional<BusinessUser> found = Optional.ofNullable(businessUserRepository.findByBusinessUserId(id));

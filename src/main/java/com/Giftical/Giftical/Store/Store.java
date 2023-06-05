@@ -28,7 +28,10 @@ public class Store {
     private String storeExplanation;
     private String storeContact;
 
-
+    public Store(Long businessUserId, String businessStoreNo){
+        this.businessUserId = businessUserId;
+        this.businessStoreNo = businessStoreNo;
+    }
     public void setStoreAddr(String storeAddr, short storeReigon,
                              String storeLattitude, String storeLongtitude, boolean auth) {
 

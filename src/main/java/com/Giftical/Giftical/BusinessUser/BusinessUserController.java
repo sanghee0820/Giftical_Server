@@ -26,11 +26,10 @@ public class BusinessUserController {
     }
 
     @PostMapping("/vendor/join")
-    public ResponseEntity<List<Store>> join(@RequestBody BusinessUser businessUser, @ResponseBody Store store){ // Make DTO
-        businessUserService.join(businessUser);
-        return businessUserService.login(businessUser.getBusinessUserId(), businessUser.getBusinessUserPw());
+    public ResponseEntity<List<Store>> join(@RequestBody BusinessJoinDTO businessJoinDTO){
+
+        BusinessUser newUser = businessUserService.join(businessJoinDTO);
+        return businessUserService.login(newUser.getBusinessUserId(), newUser.getBusinessUserPw());
     }
-    @PostMapping("/test")
-    public void test(){}
     
 }
