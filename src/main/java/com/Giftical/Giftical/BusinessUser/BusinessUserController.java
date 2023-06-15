@@ -20,14 +20,12 @@ public class BusinessUserController {
     @PostMapping("/vendor/login")
     public ResponseEntity<List<Store>> login(@RequestBody Map<String, String> requestData){
 
-        return businessUserService.login(requestData.get("businessId"),requestData.get("businessPw"));
+        return businessUserService.login(requestData.get("businessUserId"),requestData.get("businessUserPw"));
     }
 
     @PostMapping("/vendor/join")
-    public ResponseEntity<List<Store>> join(@RequestBody BusinessJoinDTO businessJoinDTO){
-
-        BusinessUser newUser = businessUserService.join(businessJoinDTO);
-        return businessUserService.login(newUser.getBusinessUserId(), newUser.getBusinessUserPw());
+    public ResponseEntity<BusinessUser> join(@RequestBody BusinessJoinDTO businessJoinDTO){
+        return businessUserService.join(businessJoinDTO);
     }
     
 }

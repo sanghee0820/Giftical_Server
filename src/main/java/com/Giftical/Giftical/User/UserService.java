@@ -30,9 +30,12 @@ public class UserService {
     }
 
     @Transactional
-    User join(User user){
-        User newUser = userRepository.save(user);
-        return newUser;
+    ResponseEntity<User> join(User user){
+        if( userRepository.findByuserId(user.getUserId()) != null ) {
+            User newUser = userRepository.save(user);
+            return new ResponseEntity<>( newUser, HttpStatus.valueOf(200));
+        }
+        return new ResponseEntity<>( null, HttpStatus.valueOf(401));
     }
 
     @Transactional

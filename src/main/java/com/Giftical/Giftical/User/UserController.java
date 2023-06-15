@@ -22,8 +22,7 @@ public class UserController {
 
     @PostMapping("/user/join")
     public ResponseEntity<User> join(@RequestBody User user){
-        User newUser = userService.join(user);
-        return new ResponseEntity<>(newUser, HttpStatus.valueOf(200));
+        return userService.join (user);
     }
     @PostMapping("/user/info")
     public ResponseEntity<User> search(@RequestBody HashMap<String, Long> userPk){
