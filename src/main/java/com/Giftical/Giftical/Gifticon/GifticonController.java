@@ -9,16 +9,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.awt.image.BufferedImage;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 public class GifticonController {
     private final GifticonService gifticonService;
 
     @PostMapping("/user/store/product")
-    public ResponseEntity<Gifticon> buyProduct(@RequestBody ProductGifticonDTO productGifticonDTO){
-        return null;
+    public String buyProduct(@RequestBody GifticonmakeDTO gifticonmakeDTO){
+
+        return gifticonService.buyProduct(gifticonmakeDTO);
     }
 }

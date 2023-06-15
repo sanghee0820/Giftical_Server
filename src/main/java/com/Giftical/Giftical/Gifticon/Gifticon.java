@@ -1,7 +1,9 @@
 package com.Giftical.Giftical.Gifticon;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +14,8 @@ import java.sql.Date;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Setter
+@Getter
 public class Gifticon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +23,9 @@ public class Gifticon {
 
     //Connect with User
     private Long userId;
+    private Long storeId;
+    private Long productId;
+
 
     // gifticon information
     private String barcode;
@@ -33,6 +39,4 @@ public class Gifticon {
     private Date giftGenerateDate;
     private Date giftEndDate;
 
-    // Image
-    //private Image giftImage;
 }
