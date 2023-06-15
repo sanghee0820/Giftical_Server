@@ -24,9 +24,5 @@ public class UserController {
     public ResponseEntity<User> join(@RequestBody User user){
         return userService.join (user);
     }
-    @PostMapping("/user/info")
-    public ResponseEntity<User> search(@RequestBody HashMap<String, Long> userPk){
-        return new ResponseEntity<>(userService.search(userPk.get("userPk")), HttpStatus.OK);
-    }
 
 }

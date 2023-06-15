@@ -38,10 +38,4 @@ public class UserService {
         return new ResponseEntity<>( null, HttpStatus.valueOf(401));
     }
 
-    @Transactional
-    User search(Long userPk){
-        Optional<User> findUser = userRepository.findById(userPk);
-        if(findUser.isEmpty()) return null;
-        return findUser.get();
-    }
 }

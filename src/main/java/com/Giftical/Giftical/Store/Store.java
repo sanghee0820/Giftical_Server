@@ -22,9 +22,6 @@ public class Store {
     private String businessStoreNo;
     private String storeName;
     private String storeAddr;
-    //    private short storeReigon;
-//    private String storeLattitude;
-//    private String storeLongtitude;
     private String storeExplanation;
     private String storeContact;
 
@@ -32,13 +29,20 @@ public class Store {
         this.businessUserId = businessUserId;
         this.businessStoreNo = businessStoreNo;
     }
-    public void setStoreAddr(String storeAddr, short storeReigon,
-                             String storeLattitude, String storeLongtitude, boolean auth) {
 
-        this.storeAddr = storeAddr;
-//        this.storeReigon = storeReigon;
-//        this.storeLattitude = storeLattitude;
-//        this.storeLongtitude = storeLongtitude;
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
     }
 
+    public void setStoreAddr(String storeAddr) {
+        this.storeAddr = storeAddr;
+    }
+
+    public void setStoreExplanation(String storeExplanation) {
+        this.storeExplanation = storeExplanation;
+    }
+
+    public void setStoreContact(String storeContact) {
+        this.storeContact = storeContact;
+    }
 }

@@ -26,8 +26,6 @@ public class GifticonService {
 
     public Object generateGifticon(Long productId){
         Optional<Product> product = productRepository.findById(productId);
-        if(product.isEmpty()) return false;
-
 
         // Barcode Making
         String barcode = "12345623124";
@@ -51,7 +49,7 @@ public class GifticonService {
         fullGraphics.setColor(Color.BLACK);
         fullGraphics.setFont(new Font("Arial", Font.BOLD, 20));
         fullGraphics.drawString(barcode, fullImage.getWidth()/2 - barcode.length()/2*10 - 10, fullImage.getHeight()-75);
-        File outputFile = new File("/Users/isanghui/Desktop/barcode.png");
+        File outputFile = new File("/Users/sanghee/Desktop/barcode.png");
         try {
             ImageIO.write(fullImage, "png", outputFile);
         } catch (IOException e) {
