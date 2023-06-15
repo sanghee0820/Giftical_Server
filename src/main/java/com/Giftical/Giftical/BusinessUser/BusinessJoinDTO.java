@@ -17,6 +17,12 @@ public class BusinessJoinDTO {
     //Bank
     private BusinessBank businessBankCode;
     private String businessBankAccount;
-
     private String businessStoreNo;
+
+    // Store Inform
+    private String storeName;
+    private String storeAddr;
+    private String storeExplanation;
+    private String storeContact;
+    private String storeImg;
 }

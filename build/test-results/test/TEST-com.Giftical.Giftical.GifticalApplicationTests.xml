@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.Giftical.Giftical.GifticalApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-15T16:21:22" hostname="isanghuiui-MacBookAir.local" time="0.131">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.Giftical.Giftical.GifticalApplicationTests" time="0.131"/>
+  <system-out><![CDATA[01:21:15.260 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+01:21:15.276 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+01:21:15.321 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.Giftical.Giftical.GifticalApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+01:21:15.336 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.Giftical.Giftical.GifticalApplicationTests], using SpringBootContextLoader
+01:21:15.341 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.Giftical.Giftical.GifticalApplicationTests]: class path resource [com/Giftical/Giftical/GifticalApplicationTests-context.xml] does not exist
+01:21:15.341 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.Giftical.Giftical.GifticalApplicationTests]: class path resource [com/Giftical/Giftical/GifticalApplicationTestsContext.groovy] does not exist
+01:21:15.341 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.Giftical.Giftical.GifticalApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+01:21:15.342 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.Giftical.Giftical.GifticalApplicationTests]: GifticalApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:21:15.432 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.Giftical.Giftical.GifticalApplicationTests]
+01:21:15.505 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/sanghee/Desktop/Software_Engineering/Giftical_Server/build/classes/java/main/com/Giftical/Giftical/GifticalApplication.class]
+01:21:15.508 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.Giftical.Giftical.GifticalApplication for test class com.Giftical.Giftical.GifticalApplicationTests
+01:21:15.606 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.Giftical.Giftical.GifticalApplicationTests]: using defaults.
+01:21:15.606 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+01:21:15.624 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@486be205, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f713686, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@74f7d1d2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b4dd216, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5ca17ab0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a62b2a4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1051817b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@35293c05, org.springframework.test.context.event.EventPublishingTestExecutionListener@620aa4ea, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2db2dd9d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3174cb09, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d411036, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7adbd080, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@41beb473, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@560513ce]
+01:21:15.628 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3a0807b7 testClass = GifticalApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@21a5fd96 testClass = GifticalApplicationTests, locations = '{}', classes = '{class com.Giftical.Giftical.GifticalApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@5e01a982, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3a0d172f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2e9fda69, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5b529706, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4e70a728, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5efa40fe], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.12)
+
+2023-06-16 01:21:16.192  INFO 9609 --- [    Test worker] c.G.Giftical.GifticalApplicationTests    : Starting GifticalApplicationTests using Java 11.0.11 on isanghuiui-MacBookAir.local with PID 9609 (started by sanghee in /Users/sanghee/Desktop/Software_Engineering/Giftical_Server)
+2023-06-16 01:21:16.196  INFO 9609 --- [    Test worker] c.G.Giftical.GifticalApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2023-06-16 01:21:17.326  INFO 9609 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-16 01:21:17.427  INFO 9609 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 5 JPA repository interfaces.
+2023-06-16 01:21:18.472  INFO 9609 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-16 01:21:18.526  INFO 9609 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-06-16 01:21:18.691  INFO 9609 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-16 01:21:18.792  INFO 9609 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-16 01:21:19.229  INFO 9609 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-16 01:21:19.257  INFO 9609 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+Hibernate: 
+    
+    drop table if exists business_user
+Hibernate: 
+    
+    drop table if exists gifticon
+Hibernate: 
+    
+    drop table if exists product
+Hibernate: 
+    
+    drop table if exists store
+Hibernate: 
+    
+    drop table if exists user
+Hibernate: 
+    
+    create table business_user (
+       id bigint not null auto_increment,
+        business_bank_account varchar(255),
+        business_bank_code integer,
+        business_user_id varchar(255),
+        business_user_phone_num varchar(255),
+        business_user_pw varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table gifticon (
+       id bigint not null auto_increment,
+        barcode varchar(255),
+        gift_cost integer not null,
+        gift_end_date date,
+        gift_generate_date date,
+        gift_used_date date,
+        gift_used_value bit not null,
+        user_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table product (
+       id bigint not null auto_increment,
+        product_category smallint not null,
+        product_explanation varchar(255),
+        product_name varchar(255),
+        product_price integer not null,
+        store_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table store (
+       id bigint not null auto_increment,
+        business_store_no varchar(255),
+        business_user_id bigint,
+        store_addr varchar(255),
+        store_contact varchar(255),
+        store_explanation varchar(255),
+        store_img varchar(255),
+        store_name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    
+    create table user (
+       id bigint not null auto_increment,
+        user_id varchar(255),
+        user_name varchar(255),
+        user_phone_num varchar(255),
+        user_pw varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2023-06-16 01:21:20.282  INFO 9609 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-16 01:21:20.293  INFO 9609 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-16 01:21:21.333  WARN 9609 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-16 01:21:22.283  INFO 9609 --- [    Test worker] c.G.Giftical.GifticalApplicationTests    : Started GifticalApplicationTests in 6.579 seconds (JVM running for 8.202)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

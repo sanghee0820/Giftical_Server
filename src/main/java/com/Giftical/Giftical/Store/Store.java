@@ -27,9 +27,14 @@ public class Store {
 
     private String storeImg;
 
-    public Store(Long businessUserId, String businessStoreNo){
+    public Store(Long businessUserId, String businessStoreNo, String storeName, String storeAddr, String storeExplanation, String storeContact, String storeImg) {
         this.businessUserId = businessUserId;
         this.businessStoreNo = businessStoreNo;
+        this.storeName = storeName;
+        this.storeAddr = storeAddr;
+        this.storeExplanation = storeExplanation;
+        this.storeContact = storeContact;
+        this.storeImg = storeImg;
     }
 
     public void setStoreName(String storeName) {

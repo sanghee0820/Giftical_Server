@@ -25,7 +25,8 @@ public class BusinessUserService {
         Optional<BusinessUser> found = Optional.ofNullable(businessUserRepository.findByBusinessUserId(newUser.getBusinessUserId()));
         if( found.isEmpty() ) {
             newUser = businessUserRepository.save(newUser);
-            storeRepository.save(new Store(newUser.getId(), user.getBusinessStoreNo()));
+            storeRepository.save(new Store(newUser.getId(), user.getBusinessStoreNo(), user.getStoreName(),
+                    user.getStoreAddr(), user.getStoreExplanation(), user.getStoreContact(), user.getStoreImg()));
             return new ResponseEntity<>( newUser, HttpStatus.valueOf(200));
         }
         // 아이디 겹침
