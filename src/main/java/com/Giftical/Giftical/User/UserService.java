@@ -31,7 +31,9 @@ public class UserService {
 
     @Transactional
     ResponseEntity<User> join(User user){
-        if( userRepository.findByuserId(user.getUserId()) != null ) {
+
+        Optional<User> findUser = Optional.ofNullable(userRepository.findByuserId(user.getUserId()));
+        if(findUser.isEmpty()) {
             User newUser = userRepository.save(user);
             return new ResponseEntity<>( newUser, HttpStatus.valueOf(200));
         }
