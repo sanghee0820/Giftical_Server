@@ -17,13 +17,8 @@ import java.awt.image.BufferedImage;
 public class GifticonController {
     private final GifticonService gifticonService;
 
-//    @PostMapping("/user/store/payment")
-//    public ResponseEntity<byte[]> buyGifticon(@RequestBody Store store){
-//  Product Id, Auth?     return gifticonService.generateGifticon();
-//        Return Image and what?
-//    }
     @PostMapping("/user/store/product")
-    public ResponseEntity<Gifticon> buyProduct(@RequestBody ProductGifticonDTO productGifticonDTODTO){
+    public ResponseEntity<Gifticon> buyProduct(@RequestBody ProductGifticonDTO productGifticonDTO){
         return null;
     }
 }

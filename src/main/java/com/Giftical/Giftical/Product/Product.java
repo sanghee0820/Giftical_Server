@@ -22,6 +22,7 @@ public class Product {
 
     private String productName;
     private int productPrice;
+
     @Lob
     private byte[] productImg;
 

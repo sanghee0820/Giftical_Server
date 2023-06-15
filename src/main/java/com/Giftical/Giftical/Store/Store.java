@@ -23,6 +23,7 @@ public class Store {
     private String storeExplanation;
     private String storeContact;
 
+    @Lob
     private byte[] storeImg;
 
     public Store(Long businessUserId, String businessStoreNo, String storeName, String storeAddr, String storeExplanation, String storeContact, String storeImg) {
