@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class ProductController {
@@ -16,5 +19,9 @@ public class ProductController {
     @PostMapping("/vendor/store/product/add")
     public ResponseEntity<Product> addProduct(@RequestBody Product product){
         return productService.addProduct(product);
+    }
+    @PostMapping("/user/store/info")
+    public ResponseEntity<List<Product>> getProductList(@RequestBody HashMap<String, Long> info){
+        return productService.getProductList(info.get("storeId"));
     }
 }
