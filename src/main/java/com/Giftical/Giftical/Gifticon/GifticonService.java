@@ -25,7 +25,7 @@ public class GifticonService {
     private final UserRepository userRepository;
     private final ProductRepository productRepository;
 
-    public Object generateGifticon(Long productId){
+    public String generateGifticon(Long productId){
         Optional<Product> product = productRepository.findById(productId);
 
         // Barcode Making
@@ -48,7 +48,7 @@ public class GifticonService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return 0;
+        return null;
 //        BitMatrix bitMatrix = new Code128Writer().encode(barcode, BarcodeFormat.CODE_128, 300, 100, null);
 //        BufferedImage bufferedImage = new BufferedImage(bitMatrix.getWidth(), bitMatrix.getHeight(), BufferedImage.TYPE_INT_RGB);
 //        Graphics2D graphics = (Graphics2D) bufferedImage.getGraphics();

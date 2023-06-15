@@ -4,10 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.sql.Blob;
 
 @Getter
 @Entity
@@ -25,7 +23,7 @@ public class Store {
     private String storeExplanation;
     private String storeContact;
 
-    private String storeImg;
+    private byte[] storeImg;
 
     public Store(Long businessUserId, String businessStoreNo, String storeName, String storeAddr, String storeExplanation, String storeContact, String storeImg) {
         this.businessUserId = businessUserId;
@@ -34,7 +32,7 @@ public class Store {
         this.storeAddr = storeAddr;
         this.storeExplanation = storeExplanation;
         this.storeContact = storeContact;
-        this.storeImg = storeImg;
+        this.storeImg = storeImg.getBytes();
     }
 
     public void setStoreName(String storeName) {

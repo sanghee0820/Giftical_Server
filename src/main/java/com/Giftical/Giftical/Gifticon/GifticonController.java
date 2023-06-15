@@ -1,5 +1,6 @@
 package com.Giftical.Giftical.Gifticon;
 
+import com.Giftical.Giftical.Product.ProductGifticonDTO;
 import com.Giftical.Giftical.Store.Store;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,9 +22,8 @@ public class GifticonController {
 //  Product Id, Auth?     return gifticonService.generateGifticon();
 //        Return Image and what?
 //    }
-    @PostMapping("/user/store/makeimg")
-    public ResponseEntity<Object> imgmake(){
-        return new ResponseEntity<>( gifticonService.generateGifticon(123L),
-                HttpStatus.valueOf(200));
+    @PostMapping("/user/store/product")
+    public ResponseEntity<Gifticon> buyProduct(@RequestBody ProductGifticonDTO productGifticonDTODTO){
+        return null;
     }
 }
