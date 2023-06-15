@@ -25,6 +25,8 @@ public class Store {
     private String storeExplanation;
     private String storeContact;
 
+    private String storeImg;
+
     public Store(Long businessUserId, String businessStoreNo){
         this.businessUserId = businessUserId;
         this.businessStoreNo = businessStoreNo;

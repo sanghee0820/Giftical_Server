@@ -7,6 +7,7 @@ import com.Giftical.Giftical.User.UserRepository;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.oned.Code128Writer;
+import com.google.zxing.qrcode.QRCodeWriter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -29,32 +30,50 @@ public class GifticonService {
 
         // Barcode Making
         String barcode = "12345623124";
-
-        BitMatrix bitMatrix = new Code128Writer().encode(barcode, BarcodeFormat.CODE_128, 300, 100, null);
-        BufferedImage bufferedImage = new BufferedImage(bitMatrix.getWidth(), bitMatrix.getHeight(), BufferedImage.TYPE_INT_RGB);
-        Graphics2D graphics = (Graphics2D) bufferedImage.getGraphics();
-
-        for (int x = 0; x < bitMatrix.getWidth(); x++) {
-            for (int y = 0; y < bitMatrix.getHeight(); y++) {
-                bufferedImage.setRGB(x, y, bitMatrix.get(x, y) ? Color.BLACK.getRGB() : Color.WHITE.getRGB());
-            }
-        }
-
-        BufferedImage fullImage = new BufferedImage(600, 1000, BufferedImage.TYPE_INT_RGB);
-        Graphics2D fullGraphics = (Graphics2D) fullImage.getGraphics();
-        fullGraphics.setColor(Color.WHITE);
-        fullGraphics.fillRect(0, 0, 600, 1000);
-
-        fullGraphics.drawImage(bufferedImage, fullImage.getWidth()/2 - 150, fullImage.getHeight()-200, null);
-        fullGraphics.setColor(Color.BLACK);
-        fullGraphics.setFont(new Font("Arial", Font.BOLD, 20));
-        fullGraphics.drawString(barcode, fullImage.getWidth()/2 - barcode.length()/2*10 - 10, fullImage.getHeight()-75);
-        File outputFile = new File("/Users/sanghee/Desktop/barcode.png");
         try {
-            ImageIO.write(fullImage, "png", outputFile);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            QRCodeWriter qrCodeWriter = new QRCodeWriter();
+            BitMatrix bitMatrix = qrCodeWriter.encode(barcode, BarcodeFormat.QR_CODE, 300, 300);
+
+            BufferedImage bufferedImage = new BufferedImage(bitMatrix.getWidth(), bitMatrix.getHeight(), BufferedImage.TYPE_INT_RGB);
+            for (int x = 0; x < bitMatrix.getWidth(); x++) {
+                for (int y = 0; y < bitMatrix.getHeight(); y++) {
+                    bufferedImage.setRGB(x, y, bitMatrix.get(x, y) ? Color.BLACK.getRGB() : Color.WHITE.getRGB());
+                }
+            }
+
+            File outputFile = new File("/Users/sanghee/Desktop/qrcode.png");
+            ImageIO.write(bufferedImage, "png", outputFile);
+
+            System.out.println("QR code image created successfully.");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return bufferedImage;
+        return 0;
+//        BitMatrix bitMatrix = new Code128Writer().encode(barcode, BarcodeFormat.CODE_128, 300, 100, null);
+//        BufferedImage bufferedImage = new BufferedImage(bitMatrix.getWidth(), bitMatrix.getHeight(), BufferedImage.TYPE_INT_RGB);
+//        Graphics2D graphics = (Graphics2D) bufferedImage.getGraphics();
+//
+//        for (int x = 0; x < bitMatrix.getWidth(); x++) {
+//            for (int y = 0; y < bitMatrix.getHeight(); y++) {
+//                bufferedImage.setRGB(x, y, bitMatrix.get(x, y) ? Color.BLACK.getRGB() : Color.WHITE.getRGB());
+//            }
+//        }
+//
+//        BufferedImage fullImage = new BufferedImage(600, 1000, BufferedImage.TYPE_INT_RGB);
+//        Graphics2D fullGraphics = (Graphics2D) fullImage.getGraphics();
+//        fullGraphics.setColor(Color.WHITE);
+//        fullGraphics.fillRect(0, 0, 600, 1000);
+//
+//        fullGraphics.drawImage(bufferedImage, fullImage.getWidth()/2 - 150, fullImage.getHeight()-200, null);
+//        fullGraphics.setColor(Color.BLACK);
+//        fullGraphics.setFont(new Font("Arial", Font.BOLD, 20));
+//        fullGraphics.drawString(barcode, fullImage.getWidth()/2 - barcode.length()/2*10 - 10, fullImage.getHeight()-75);
+//        File outputFile = new File("/Users/sanghee/Desktop/barcode.png");
+//        try {
+//            ImageIO.write(fullImage, "png", outputFile);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//        return bufferedImage;
     }
 }
