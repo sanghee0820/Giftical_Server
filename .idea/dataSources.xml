@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:mysql://giftical.cacdakzfig0y.ap-northeast-2.rds.amazonaws.com:3306/giftical</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="giftical@localhost" uuid="204e255b-8fa6-4938-adb5-3fd9da91c8fd">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/giftical</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

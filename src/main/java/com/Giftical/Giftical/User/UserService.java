@@ -18,13 +18,15 @@ public class UserService {
 
     @Transactional
     ResponseEntity<User> login(String userId, String userPw) {
-        Optional<User> findUser = Optional.ofNullable(userRepository.findByuserId(userId));
-        if(findUser.isEmpty()) return new ResponseEntity<>(null,
-                HttpStatus.valueOf(HttpStatus.NON_AUTHORITATIVE_INFORMATION.value()));
-        if(findUser.get().getUserPw() == userPw) return new ResponseEntity<>(null,
-                HttpStatus.valueOf(HttpStatus.NON_AUTHORITATIVE_INFORMATION.value()));
 
-        return new ResponseEntity<>(findUser.get(), HttpStatus.ACCEPTED);
+        Optional<User> findUser = Optional.ofNullable(userRepository.findByuserId(userId));
+
+        if(findUser.isEmpty()) return new ResponseEntity<>(null,
+                HttpStatus.valueOf(401));
+        if(!findUser.get().getUserPw().equals(userPw)) return new ResponseEntity<>(null,
+                HttpStatus.valueOf(401));
+
+        return new ResponseEntity<>(findUser.get(), HttpStatus.valueOf(200));
     }
 
     @Transactional
