@@ -22,13 +22,13 @@ public class BusinessUserService {
                 user.getBusinessUserPw(), user.getBusinessBankAccount(), user.getBusinessBankCode(),
                 user.getBusinessUserPhoneNum());
 
-        // ID 겹침
-        if( businessUserRepository.findByBusinessUserId( newUser.getBusinessUserId()) == null ) {
+        Optional<BusinessUser> found = Optional.ofNullable(businessUserRepository.findByBusinessUserId(newUser.getBusinessUserId()));
+        if( found.isEmpty() ) {
             newUser = businessUserRepository.save(newUser);
             storeRepository.save(new Store(newUser.getId(), user.getBusinessStoreNo()));
             return new ResponseEntity<>( newUser, HttpStatus.valueOf(200));
         }
-
+        // 아이디 겹침
         return new ResponseEntity<>(null, HttpStatus.valueOf(401));
     }
     public ResponseEntity<List<Store>> login(String id, String pw){
