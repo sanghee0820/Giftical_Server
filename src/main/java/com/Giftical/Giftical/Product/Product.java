@@ -3,6 +3,7 @@ package com.Giftical.Giftical.Product;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +24,7 @@ public class Product {
     private Long storeId;
 
     private String productName;
-    private short productCategory;
     private int productPrice;
-    private String productExplanation;
+    private byte[] productImg;
 
 }

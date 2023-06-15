@@ -11,5 +11,5 @@ import lombok.Setter;
 @Getter
 public class StoreoutDTO {
     private String storeName;
-    private String storeImg;
+    private byte[] storeImg;
 }
