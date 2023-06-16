@@ -32,11 +32,13 @@ public class Gifticon {
     private int giftCost;
 
     // With Gifticon Use
-    private boolean giftUsedValue;
+    private Boolean giftUsedValue;
     private Date giftUsedDate;
 
     // Buy date, end tate,
     private Date giftGenerateDate;
     private Date giftEndDate;
+
+
 
 }

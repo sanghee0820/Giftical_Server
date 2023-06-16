@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
 
 @RestController
 @RequiredArgsConstructor
@@ -20,7 +21,11 @@ public class GifticonController {
 
     @PostMapping("/user/store/product")
     public String buyProduct(@RequestBody GifticonmakeDTO gifticonmakeDTO){
-
         return gifticonService.buyProduct(gifticonmakeDTO);
+    }
+
+    @PostMapping("/vendor/store/payment")
+    public ResponseEntity<Boolean> payGifticon(@RequestBody HashMap<String, String> info){
+        return gifticonService.checkBarcode(info.get("barcode"));
     }
 }

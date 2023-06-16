@@ -9,7 +9,11 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.oned.Code128Writer;
 import com.google.zxing.qrcode.QRCodeWriter;
 import lombok.RequiredArgsConstructor;
+import net.bytebuddy.asm.Advice;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -53,5 +57,15 @@ public class GifticonService {
         Gifticon newGifticon = gifticonRepository.save(gifticon);
 
         return newGifticon.getBarcode();
+    }
+    @Transactional
+    public ResponseEntity<Boolean> checkBarcode(String barcode){
+        Gifticon gifticon = gifticonRepository.findByBarcode(barcode);
+        if(gifticon.getGiftUsedValue() == false ) {
+            gifticon.setGiftUsedValue(true);
+            gifticon.setGiftUsedDate(Date.valueOf(LocalDate.now()));
+            return new ResponseEntity<>(true, HttpStatus.valueOf(200));
+        }
+        return new ResponseEntity<>(false, HttpStatus.valueOf(200));
     }
 }

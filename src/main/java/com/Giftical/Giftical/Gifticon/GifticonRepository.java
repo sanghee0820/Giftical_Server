@@ -5,4 +5,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GifticonRepository extends JpaRepository<Gifticon, Object> {
+
+    Gifticon findByBarcode(String barcode);
 }
