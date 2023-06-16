@@ -47,7 +47,7 @@ public class GifticonService {
         gifticon.setStoreId(gifticonmakeDTO.getStoreId());
         gifticon.setBarcode(barcode);
 //        gifticon.setGiftCost(product.get().getProductPrice());
-        gifticon.setGiftCost(1);
+        gifticon.setGiftCost(3000);
         gifticon.setGiftUsedValue(false);
         gifticon.setGiftUsedDate(null);
 
